@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Blog de Renzo Lanata</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Blog de Renzo pa</a></h1>
+        </div>
+        {% for publicacion in publicaciones %}
+        <div>
+            <p> publicado: {{ publicacion.fecha_publicacion }}</p>
+            <h2><a href="">{{ publicacion.titulo }}</a></h2>
+            <p>{{ publicacion.texto|linebreaksbr }}</p>
+            <hr>
+        </div>
+        {% endfor %}
+
+    </body>
+</html>
