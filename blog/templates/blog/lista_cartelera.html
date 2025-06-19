@@ -1,0 +1,14 @@
+<html> 
+    <head>
+
+    </head>
+    <body>
+        <h1>Cartelera ren</h1>
+        {% for C in cartelera %}
+            <h2>Nombre de la Cartelera: {{C.nombre}}</h2>
+            <p>Titulo: {{C.titulo}}</p>
+            <p>Reseña: {{C.reseña}} </p>
+            <img src="{{ C.imagen }}" alt="">
+        {% endfor %}
+    </body>
+</html>

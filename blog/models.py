@@ -8,10 +8,17 @@ class Publicacion(models.Model):
     texto = models.TextField()
     fecha_publicacion = models.DateTimeField(default=timezone.now)
     hora_creacion = models.DateTimeField(blank=True, null=True)
+
     
-    def publicar(self):
-        self.fecha_publicacion = timezone.now()
-        self.save()
+class Cartelera(models.Model):
+    usuario=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    titulo = models.CharField(max_length=200)
+    reseña = models.TextField()
+    imagen = models.URLField(blank=True, null=True)
+    fecha_publicacion = models.DateTimeField(default=timezone.now)
+    hora_creacion = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return self.titulo
+        
+    
