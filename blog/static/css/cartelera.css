@@ -73,3 +73,13 @@ body {
 }
 
 .hola p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* CLASIFICACIÓN */
+.hola p:last-child {
+  color: #ffce00;
+  font-weight: bold;
+}
