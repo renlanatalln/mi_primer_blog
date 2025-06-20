@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #111;
+  color: #eee;
+  padding: 50px 20px;
+}
+
+/* ENCABEZADO */
+.page-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.page-header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #ffce00;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* CARD DE PELÍCULA */
+.post {
+  display: flex;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  height: 240px;
+}
+.post:hover {
+  transform: scale(1.02);
+}
+
+/* IMAGEN */
+.img {
+  width: 160px;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: brightness(90%);
+  transition: filter 0.3s ease;
+}
+.post:hover .img {
+  filter: brightness(100%);
+}
+
+/* CONTENIDO */
+.hola {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.hola h2 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.hola p {

@@ -1,14 +1,29 @@
-<html> 
-    <head>
+{% load static %}
+<html>
 
-    </head>
-    <body>
+<head>
+    <link rel="stylesheet" href="{% static '/css/cartelera.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-header">
         <h1>Cartelera ren</h1>
-        {% for C in cartelera %}
-            <h2>Nombre de la Cartelera: {{C.nombre}}</h2>
-            <p>Titulo: {{C.titulo}}</p>
-            <p>Reseña: {{C.reseña}} </p>
-            <img src="{{ C.imagen }}" alt="">
-        {% endfor %}
-    </body>
+    </div>
+    {% for C in cartelera %}
+    <div class="post">
+        <img src="{{ C.imagen }}" alt="" class="img">
+        <div class="hola">
+            <h2>{{C.nombre_de_la_pelicula}}</h2>
+            <p>{{C.estreno_duracion}}</p>
+            <p>{{C.reseña}} </p>
+            <p>{{C.clasificacion}} </p>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+
 </html>
