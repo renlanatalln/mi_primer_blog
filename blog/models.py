@@ -21,6 +21,6 @@ class Cartelera(models.Model):
     hora_creacion = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
-        return self.nombre_de_la_pelicula
+        return self.nombre_de_la_pelicula or "sin titulo"
         
     
