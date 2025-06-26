@@ -79,13 +79,17 @@ body {
 }
 
 /* CLASIFICACIÓN */
-.hola p:last-child {
+.clasificacion {
   color: #ffce00;
   font-weight: bold;
 }
+
+/* FECHA DE PUBLICACIÓN */
 .fecha-publicacion {
   font-size: 12px;
   color: #999;
-  margin-top: 6px;
+  text-align: right;
+  margin-top: auto;
   font-style: italic;
 }
+

@@ -13,18 +13,20 @@
     <div class="page-header">
         <h1>Cartelera ren</h1>
     </div>
+
     {% for C in cartelera %}
     <div class="post">
         <img src="{{ C.imagen }}" alt="" class="img">
         <div class="hola">
-            <h2>{{C.nombre_de_la_pelicula}}</h2>
-            <p>{{C.estreno_duracion}}</p>
-            <p>{{C.reseña}} </p>
-            <p>{{C.clasificacion}} </p>
-            <p class="fecha-publicacion">Publicado el {{ C.fecha }}</p>
+            <h2>{{ C.nombre_de_la_pelicula }}</h2>
+            <p>{{ C.estreno_duracion }}</p>
+            <p>{{ C.reseña }}</p>
+            <p class="clasificacion">{{ C.clasificacion }}</p>
+            <p class="fecha-publicacion">Publicado el {{ C.fecha|date:"j \\d\\e F \\d\\e Y" }}</p>
         </div>
     </div>
     {% endfor %}
+
 </body>
 
 </html>
