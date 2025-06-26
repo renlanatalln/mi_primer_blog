@@ -13,7 +13,7 @@ class Publicacion(models.Model):
 class Cartelera(models.Model):
     usuario=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     nombre_de_la_pelicula = models.TextField(blank=True, null=True)
-    estreno_categoria_duracion = models.TextField(blank=True, null=True)
+    estreno_duracion = models.TextField(blank=True, null=True)
     reseña = models.TextField(blank=True, null=True)
     clasificacion = models.TextField(blank=True, null=True)
     imagen = models.URLField(blank=True, null=True)
